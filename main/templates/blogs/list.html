@@ -1,0 +1,27 @@
+{% extends 'layout/index.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Blogs</h1>
+        <a href="create/">Add New</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in dataset %}
+                    <tr>
+                            <td><a href="{{data.id}}">{{ data.id }}</a></td>
+                            <td><a href="{{data.id}}">{{ data.title }}</a></td>
+                            <td><a href="{{data.id}}">{{ data.description }}</a></td>
+                            <td><a href="{{data.id}}/delete/">X</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

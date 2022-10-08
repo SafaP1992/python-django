@@ -1,0 +1,12 @@
+{% extends 'layout/index.html' %}
+
+{% block content %}
+    <div class="main">
+        <!-- Specify fields to be displayed -->
+        {{ data.title }}<br/>
+        {{ data.description }}<br/>
+        
+        <a href="/blog/">back</a>
+        <a href="update/">Edit</a>
+    </div>
+{% endblock %}
